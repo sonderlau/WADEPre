@@ -1,8 +1,12 @@
-# StormWave: Multi-Scale Wavelet Disentanglement for Precipitation Nowcasting
+# WADE-Pre: Wavelet-based Disentanglement of Advection and Intensity for Mitigating the Smoothing Effect in Extreme Precipitation Nowcasting
 
 By Baitian Liu, Haiping Zhang, and Xujian Fang*.
 
 Department of Computer Science and Technology, Hangzhou Dianzi University
+
+
+
+**WADE-Pre**: **WA**velet **D**isentanglement for Extreme **Pre**cipitation
 
 
 
@@ -12,36 +16,23 @@ Department of Computer Science and Technology, Hangzhou Dianzi University
 
 > *Corresponding author: Xujian Fang
 
-> Last updated: Nov 21 / 2025
+> Last updated: Nov 26 / 2025
 
 
 
 ## Introduction
 
-StormWave is a multi-scale wavelet disentanglement model for precipitation nowcasting,  we propose a `DetailNetwork + ApproximationNetwork + Refiner` architecture that separately learns large-scale patterns(A coefficient) and local details(D coefficients).
+**WADE-Pre** is a wavelet-based deep learning framework designed to tackle the <u>smoothing effect</u> in extreme precipitation nowcasting. By explicitly disentangling radar imagery into `stable large-scale advection` (low-frequency) and `volatile local intensity` (high-frequency) components, the model overcomes the regression-to-the-mean dilemma inherent in standard pixel-wise optimization. Powered by a `multi-task curriculum learning strategy`, WADE-Pre achieves state-of-the-art performance on the SEVIR benchmark, significantly improving forecast accuracy and structural fidelity for high-impact weather events compared to Fourier-based and deterministic baselines.
 
-This repository contains the part of training and inference code for running StormWave to make predictions (6 --> 6) on SEVIR datasets.
+This repository contains the part of the training and inference code for running WADE-Pre to make predictions (6 --> 6) on SEVIR VIL datasets.
 
 
 
 ## SEVIR Dataset
 
-**S**torm **EV**ent **I**mage**R**y (SEVIR) dataset is a spatiotemporally aligned dataset containing over 10,000 weather events. We adopt NEXRAD Vertically Integrated Liquid (VIL) mosaics in SEVIR for benchmarking precipitation nowcasting, i.e., to predict the future VIL up to 6\*10 minutes given 6\*10 minutes context VIL. The resolution is thus `6×384×384→6×384×384`.
+**S**torm **EV**ent **I**mage**R**y (SEVIR) dataset is a spatiotemporally aligned dataset containing over 10,000 weather events. We adopt NEXRAD Vertically Integrated Liquid (VIL) mosaics in SEVIR for benchmarking precipitation nowcasting, i.e., to predict the future VIL up to 6\*10 minutes given 6\*10 minutes context VIL, and resize the spatial size to 128. The resolution is thus `6×128×128 → 6×128×128`.
 
 We thank AWS for providing online download service, for more details please refer to [AWS - Storm EVent ImageRy (SEVIR)](https://registry.opendata.aws/sevir/)
-
-
-
-The dataloder returns a dict: 
-
-```python
-{
-  "sequence": torch.Tensor,
-  "target": torch.Tensor,
-}
-```
-
-Each tensor's shape is `(Batch, 6, 128, 128)`.
 
 
 
@@ -49,7 +40,7 @@ Each tensor's shape is `(Batch, 6, 128, 128)`.
 
 
 
-### Enviroment
+### Environment
 
 ```bash
 conda env create -f env.yaml
@@ -58,15 +49,11 @@ conda activate stormwave
 
 
 
-### Resource
-
-Pretrained weight: 
-
 
 
 ### Evaluation
 
-Open `eval.py` file, and replace the weight file path to your path. Then run the command:
+Open the `eval.py` file, and replace the weight file path with your path. Then run the command:
 
 ```bash
 python eval.py 
@@ -76,15 +63,13 @@ python eval.py
 
 ### Training
 
-In `train.py` file, we have provided the hyper-parameters that we use in experiments.
-
 ```python
 python train.py
 ```
 
 
 
-When you start training, these folders may offer you useful informations:
+When you start training, these folders may offer you useful information:
 
 - `logs`  All the metrics during training have been recorded in this file, including hyper-parameters.
 - `checkpoints` Mode weight file.
@@ -94,9 +79,9 @@ When you start training, these folders may offer you useful informations:
 ## Citation
 
 ```
-@article{StromWave2025,
+@article{liuWADEPre2025,
   author = {Baitian, Liu and Haiping, Zhang and Xujian, Fang},
-  title = {StormWave: Multi-Scale Wavelet Disentanglement for Precipitation Nowcasting},
+  title = {{WADE-Pre}: Wavelet-based Disentanglement of Advection and Intensity for Mitigating the Smoothing Effect in Extreme Precipitation Nowcasting},
   journal = {Geophysical Research Letters},
   volume = {},
   number = {},
@@ -116,17 +101,17 @@ Our implementation is heavily inspired by the following excellent works. We exte
 
 
 
-Third-party libraries:
+Third-party libraries and tools:
 
 - [PyTorch](https://pytorch.org/)
 - [PyTorch Lightning](https://www.pytorchlightning.ai/)
 - [Muon](https://github.com/KellerJordan/Muon)
+- [Draw.io](https://www.drawio.com/)
 
 
 
 We refer to implementations of the following repositories and sincerely thank their contribution for the community.
 
-- [pySTEPS](https://pysteps.github.io/) - BSD-3-Clause license
 - [U-Net](https://github.com/himashi92/vanila-unet/blob/master/model/Unet.py)
 - [ConvLSTM](https://github.com/Hzzone/Precipitation-Nowcasting/blob/master/nowcasting/models/convLSTM.py)
 - [EarthFarseer](https://github.com/Alexander-wu/EarthFarseer)
