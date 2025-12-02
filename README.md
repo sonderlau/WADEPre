@@ -2,7 +2,7 @@
 
 
 
-By Baitian Liu^1^, Haiping Zhang^1,2^, Luan Xu^3^, Ying Li^3^, Feng Chen^3^, Qing Zhang^4^, Xujian Fang^1,2^, Chonglei Zhu^2^, Hao Wu^1*^
+By Baitian Liu [1], Haiping Zhang [1, 2], Luan Xu [3], Ying Li [3], Feng Chen [3], Qing Zhang [4], Xujian Fang [1, 2], Chonglei Zhu [2], Hao Wu [1, *****]
 
 
 
@@ -14,13 +14,13 @@ By Baitian Liu^1^, Haiping Zhang^1,2^, Luan Xu^3^, Ying Li^3^, Feng Chen^3^, Qin
 >
 > 4. Zhejiang Province Meteorological Bureau, Hangzhou, Zhejiang Province, China
 >
-> \*Corresponding author: Xujian Fang
+> *****Corresponding author: Hao Wu
 
 
 
 
 
-**WADE-Pre**: **WA**velet **D**isentanglement for Extreme **Pre**cipitation
+**WADE-Pre**: **WA**velet **D**isentanglement Model for Extreme **Pre**cipitation
 
 
 
