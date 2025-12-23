@@ -1,26 +1,23 @@
-# WADE-Pre: Wavelet-based Disentanglement of Advection and Intensity for Mitigating the Smoothing Effect in Extreme Precipitation Nowcasting
+# SpectraWave: A Spectral-Decomposition Deep Learning Framework for Extreme Precipitation Nowcasting
 
 
 
-By Baitian Liu [1], Haiping Zhang [1, 2], Luan Xu [3], Ying Li [3], Feng Chen [3], Qing Zhang [4], Xujian Fang [1, 2], Chonglei Zhu [2], Hao Wu [1, *****]
+By Baitian Liu [1], Haiping Zhang [1], Huiling Yuan [2, 3], Yefeng Chen [4], Luan Xu [4], Ying Li [4], Feng Chen [4], Xujian Fang [1], Hao Wu [1, *]
 
 
 
 > 1. Department of Computer Science and Technology, Hangzhou Dianzi University, Hangzhou, Zhejiang  Province, China
->
-> 2. Hangzhou Dianzi University Information Engineering College, Hangzhou, Zhejiang Province, China
->
-> 3. Zhejiang Institute of Meteorological Sciences, Hangzhou, Zhejiang Province, China
->
-> 4. Zhejiang Province Meteorological Bureau, Hangzhou, Zhejiang Province, China
->
-> *****Corresponding author: Hao Wu
+>2. State Key Laboratory of Severe Weather Meteorological Science and Technology, Nanjing University, Nanjing, China
+> 3. Key Laboratory of Mesoscale Severe Weather, Ministry of Education, and School of Atmospheric Sciences, Nanjing University, Nanjing, China
+>4. Zhejiang Institute of Meteorological Sciences, Hangzhou, Zhejiang Province, China
+> 
+>*Corresponding author: Hao Wu
 
 
 
 
 
-**WADE-Pre**: **WA**velet **D**isentanglement Model for Extreme **Pre**cipitation
+
 
 
 
@@ -28,13 +25,13 @@ By Baitian Liu [1], Haiping Zhang [1, 2], Luan Xu [3], Ying Li [3], Feng Chen [3
 
 
 
-> Last updated: Dec 2. 2025
+> Last updated: Dec 23. 2025
 
 
 
 ## Introduction
 
-**WADE-Pre** is a wavelet-based deep learning framework designed to tackle the <u>smoothing effect</u> in extreme precipitation nowcasting. By explicitly disentangling radar imagery into `stable large-scale advection` (low-frequency) and `volatile local intensity` (high-frequency) components, the model overcomes the regression-to-the-mean dilemma inherent in standard pixel-wise optimization. Powered by a `multi-task curriculum learning strategy`, WADE-Pre achieves state-of-the-art performance on the SEVIR benchmark, significantly improving forecast accuracy and structural fidelity for high-impact weather events compared to Fourier-based and deterministic baselines.
+**SpectraWave** is a wavelet-based deep learning framework designed to tackle the <u>smoothing effect</u> in extreme precipitation nowcasting. By explicitly disentangling radar imagery into `stable large-scale advection` (low-frequency) and `volatile local intensity` (high-frequency) components, the model overcomes the regression-to-the-mean dilemma inherent in standard pixel-wise optimization. Powered by a `multi-task curriculum learning strategy`, WADE-Pre achieves state-of-the-art performance on the SEVIR benchmark, significantly improving forecast accuracy and structural fidelity for high-impact weather events compared to Fourier-based and deterministic baselines.
 
 This repository contains the part of the training and inference code for running WADE-Pre to make predictions (6 --> 6) on SEVIR VIL datasets.
 
@@ -91,10 +88,11 @@ When you start training, these folders may offer you useful information:
 ## Citation
 
 ```
-@article{liuWADEPre2025,
+@article{liuSpectraWave2025,
   author = {Baitian, Liu and Haiping, Zhang and Xujian, Fang},
-  title = {{WADE-Pre}: Wavelet-based Disentanglement of Advection and Intensity for Mitigating the Smoothing Effect in Extreme Precipitation Nowcasting},
-  journal = {Geophysical Research Letters},
+  title = {A Spectral-Decomposition Deep Learning Framework for
+Extreme Precipitation Nowcasting},
+  journal = {Environmental Research Letters},
   volume = {},
   number = {},
   pages = {},
