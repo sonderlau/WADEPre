@@ -17,11 +17,16 @@
 
 
 
+<img src="./assets/Architecture.pdf" style="zoom:200%;" />
+
 
 
 *Authors*: Baitian Liu [1], Haiping Zhang [1], Huiling Yuan [2, 3], Dongjing Wang [1], Ying Li [4], Feng Chen [4], Hao Wu [1, *]
 
 
+<details>
+
+<summary>Affiliations</summary>
 
 > 1. Department of Computer Science and Technology, Hangzhou Dianzi University, Hangzhou, Zhejiang  Province, China
 > 2. State Key Laboratory of Severe Weather Meteorological Science and Technology, Nanjing University, Nanjing, China
@@ -30,6 +35,7 @@
 > 
 >*Corresponding author: Hao Wu
 
+</details>
 
 
 ## 📢 News
@@ -74,7 +80,33 @@ We achieve state-of-the-art performance on the SEVIR and Shanghai Radar datasets
 
 
 
-TBD.
+SEVIR dataset:
+
+|        Model | Type |     CSI-M ↑     |    CSI-181↑     |    CSI-219↑     |     RMSE ↓      |      HSS ↑      |     SSIM ↑      |
+| -----------: | :--: | :-------------: | :-------------: | :-------------: | :-------------: | :-------------: | :-------------: |
+|     ConvLSTM |  ND  |    0.355974     |    0.155084     |    0.041291     |    1.290777     |    0.445585     |    0.717261     |
+|          MAU |  ND  |    0.378454     |    0.179911     |    0.078185     |    1.290873     |    0.477095     |    0.719202     |
+|        SimVP |  ND  |    0.391180     |    0.203362     |    0.073078     |    1.244711     |    0.496391     |    0.668615     |
+| EarthFarseer |  D   |    0.394133     |    0.203624     |    0.064953     |    1.238125     |    0.494665     |    0.545065     |
+|     AlphaPre |  D   | <u>0.408885</u> | <u>0.224541</u> | <u>0.082268</u> |  **1.207027**   | <u>0.512415</u> | <u>0.749047</u> |
+|  **WADEPre** |  D   |  **0.416419**   |  **0.238489**   |  **0.115865**   | <u>1.232280</u> |  **0.526560**   |  **0.754846**   |
+
+
+
+Shanghai Radar dataset:
+
+| Model        | Type |     CSI-M ↑     |    CSI-35 ↑     | CSI-40 ↑        |     RMSE ↓      |      HSS ↑      |     SSIM ↑      |
+| :----------- | ---: | :-------------: | :-------------: | :-------------- | :-------------: | :-------------: | :-------------: |
+| ConvLSTM     |   ND |    0.253558     |    0.052567     | 0.001231        |    3.033739     |    0.337086     | <u>0.770083</u> |
+| MAU          |   ND |    0.346315     |    0.249759     | 0.126814        |    3.234246     |    0.473638     |    0.736891     |
+| SimVP        |   ND |    0.322941     |    0.191222     | 0.074395        |    3.165812     |    0.413999     |    0.738400     |
+| EarthFarseer |    D |    0.362593     |    0.258890     | 0.051279        | <u>2.607779</u> |    0.477972     |    0.498071     |
+| AlphaPre     |    D | <u>0.409432</u> | <u>0.303714</u> | <u>0.191909</u> |    2.663889     | <u>0.542150</u> |    0.726093     |
+| **WADEPre**  |    D |  **0.421976**   |  **0.317689**   | **0.201965**    |  **2.595196**   |  **0.550064**   |  **0.770512**   |
+
+
+
+
 
 
 
@@ -144,6 +176,8 @@ python eval.py
 ```
 
 
+
+The pretrained weights will be released upon acceptance.
 
 ---
 
