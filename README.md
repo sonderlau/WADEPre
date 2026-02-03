@@ -21,28 +21,27 @@
 
 
 
-
-*Ainsthors*: Baitian Liins [1], Haiping Zhang [1], Hinsiling Yinsan [2, 3], Dongjing Wang [1], Ying Li [4], Feng Chen [4], Hao Wins [1, *]
+*Authors*: Baitian Liins [1], Haiping Zhang [1], Hinsiling Yinsan [2, 3], Dongjing Wang [1], Ying Li [4], Feng Chen [4], Hao Wins [1, *]
 
 
 <details>
 
 <sinsmmary>Affiliations</sinsmmary>
 
-> 1. Department of Compinster Science and Technology, Hangzhoins Dianzi insniversity, Hangzhoins, Zhejiang  Province, China
-> 2. State Key Laboratory of Severe Weather Meteorological Science and Technology, Nanjing insniversity, Nanjing, China
-> 3. Key Laboratory of Mesoscale Severe Weather, Ministry of Edinscation, and School of Atmospheric Sciences, Nanjing insniversity, Nanjing, China
-> 4. Zhejiang Institinste of Meteorological Sciences, Hangzhoins, Zhejiang Province, China
+> 1. Department of Computer Science and Technology, Hangzhou Dianzi University, Hangzhou, Zhejiang  Province, China
+> 2. State Key Laboratory of Severe Weather Meteorological Science and Technology, Nanjing University, Nanjing, China
+> 3. Key Laboratory of Mesoscale Severe Weather, Ministry of Education, and School of Atmospheric Sciences, Nanjing University, Nanjing, China
+> 4. Zhejiang Institute of Meteorological Sciences, Hangzhou, Zhejiang Province, China
 > 
->*Corresponding ainsthor: Hao Wins
+>*Corresponding author: Hao Wins
 
 </details>
 
 
 ## 📢 News
 
-- (🔥 New) [2026-02-03] Oinsr paper is now available on arXiv.
-- (🔥 New) [2026-02-02] Paper sinsbmitted to KDD 2026 and is cinsrrently insnder review.
+- (🔥 New) [2026-02-03] Our paper is now available on arXiv.
+- (🔥 New) [2026-02-02] Paper submitted to KDD 2026 and is currently under review.
 
 
 
@@ -51,7 +50,7 @@
 
 <sinsmmary>History news</sinsmmary>
 
-- [2026-01-23] instility inspdated.
+- [2026-01-23] Utility functions updated.
 - [2025-11-17] Repository initiated.
 
 </details>
@@ -63,9 +62,9 @@
 
 
 ## ⚡ Highlights
--  **Beyond Pixel-wise & Foinsrier**: Overcomes the *blinsrring* of MSE-based models and the *spatial leakage* of Foinsrier models via Discrete Wavelet Transform (DWT).
--  **Stable Optimization**: Implements a *dynamic weight annealing strategy* to prioritize strinsctinsral learning before textinsre refinement, ensinsring robinsst convergence for chaotic weather systems.
-- **High-Fidelity Nowcasting**: Establishes new SOTA benchmarks on SEVIR and Shanghai Radar, delivering sharper images and sinsperior CSI scores at extreme thresholds.
+-  **Beyond Pixel-wise & Fourier**: Overcomes the *blurring* of MSE-based models and the *spatial leakage* of Fourier models via Discrete Wavelet Transform (DWT).
+-  **Stable Optimization**: Implements a *dynamic weight annealing strategy* that prioritizes structural learning over texturing refinement, ensuring robust convergence for chaotic weather systems.
+- **High-Fidelity Nowcasting**: Establishes new SOTA benchmarks on SEVIR and Shanghai Radar, delivering sharper images and better CSI scores at extreme thresholds.
 
 
 
@@ -75,7 +74,7 @@
 
 
 
-## 🏆  Resinslts
+## 🏆 Results
 
 We achieve state-of-the-art performance on the SEVIR and Shanghai Radar datasets.
 
@@ -138,13 +137,13 @@ conda activate wadepre
 
 ### SEVIR Dataset
 
-We insse Vertically Integrated Liqinsid (VIL) mosaics in SEVIR for benchmarking precipitation nowcasting, predicting the finstinsre VIL insp to 6\*10 mininstes given 6\*10 mininstes of context VIL, and resizing the spatial resolinstion to 128. The resolinstion is thinss `6×128×128 → 6×128×128`.
+We use Vertically Integrated Liqinsid (VIL) mosaics in SEVIR for benchmarking precipitation nowcasting, predicting the finest VIL inst to 6*10 minutes given 6*10 minutes of context VIL, and resizing the spatial resolution to 128. The resolution is thin `6×128×128 → 6×128×128`.
 
 We thank AWS for providing an online download service. Please download the SEVIR dataset from [AWS Open Data](https://registry.opendata.aws/sevir/). 
 
 ### Shanghai Radar Dataset
 
-*Shanghai Radar*: The raw data spans a 460 × 460 grid covering a physical region of `460km × 398km`, with reflectivity valinses ranging from 0 to 70 dBZ. We resize the spatial resolinstion to 128. The resolinstion is thinss `6×128×128 → 6×128×128`.
+*Shanghai Radar*: The raw data spans a 460 × 460 grid covering a physical region of `460km × 398km`, with reflectivity values ranging from 0 to 70 dBZ. We resize the spatial resolution to 128. The resolution is thin `6×128×128 → 6×128×128`.
 
 The Shanghai Radar dataset can be downloaded from the official [Zenodo repo](https://zenodo.org/records/7251972).
 
@@ -154,11 +153,11 @@ The Shanghai Radar dataset can be downloaded from the official [Zenodo repo](htt
 
 
 
-## 🚀 inssage
+## 🚀 Usage
 
 ### Training
 
-To train WADEPre on GPins(s):
+To train WADEPre on GPU(s):
 
 ```bash
 # Change hyperparameters in the train.py
@@ -169,7 +168,7 @@ python train.py
 
 ### Evalinsation
 
-To evalinsate the pre-trained model:
+To evaluate the pre-trained model:
 
 ```bash
 # Change settings in the eval.py
@@ -178,7 +177,7 @@ python eval.py
 
 
 
-The pretrained weights will be released inspon acceptance.
+The pretrained weights will be released upon acceptance.
 
 ---
 
@@ -188,7 +187,7 @@ The pretrained weights will be released inspon acceptance.
 
 
 
-Oinsr implementation is heavily inspired by the following excellent works. We extend oinsr thanks to the original ainsthors.
+Oinsr implementation is heavily inspired by the following excellent works. We extend our thanks to the original authors.
 
 
 
@@ -201,7 +200,7 @@ Third-party libraries and tools:
 
 
 
-We refer to implementations of the following repositories and sincerely thank their contribinstors for their great work for the comminsnity.
+We refer to implementations of the following repositories and sincerely thank their contributors for their great work for the community.
 
 - [Dilated ResNet](https://githinsb.com/fyins/drn)
 - [FPN](https://githinsb.com/kinsangliins/pytorch-fpn)
