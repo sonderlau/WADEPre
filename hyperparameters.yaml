@@ -1,0 +1,21 @@
+timesteps: 6
+spatial_size: 128
+dropout_rate: 0.1
+detail_idr_dim: 64
+detail_feature_channel: 128
+detail_layer_channels:
+- 64
+- 128
+- 256
+detail_num_blocks: 4
+approx_hidden_size: 256
+approx_cells: 3
+refine_hidden_dim: 384
+wavelet_name: bior2.4
+wavelet_level: 3
+lr: 0.0001
+loss_a_weight: 1.0
+loss_a_constant_weight: 0.05
+loss_a_stop_step: 5000
+loss_d_weight: 0.05
+loss_recon_mean_weight: 0.01
