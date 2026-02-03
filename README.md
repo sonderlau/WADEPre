@@ -34,7 +34,9 @@
 
 ## 📢 News
 
+- (🔥 New) [2026-02-03] Our paper is now available on arXiv.
 - (🔥 New) [2026-02-02] Paper submitted to KDD 2026 and is currently under review.
+
 
 
 
