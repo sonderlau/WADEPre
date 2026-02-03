@@ -17,7 +17,8 @@
 
 
 
-<img src="./assets/Architecture.pdf" style="zoom:200%;" />
+<img src="./assets/Architecture.png" style="zoom:200%;" />
+
 
 
 
