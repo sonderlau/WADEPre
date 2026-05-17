@@ -40,8 +40,8 @@
 
 ## 📢 News
 
-- (🔥 New) [2026-02-03] Our paper is now available on arXiv.
-- (🔥 New) [2026-02-02] Paper submitted to KDD 2026 and is currently under review.
+- (🔥 New) [2026-05-17] **Rejected** by KDD AI4S Track (2026 Feb Cycle)
+- [2026-02-03] Our paper is now available on arXiv.
 
 
 
@@ -49,7 +49,7 @@
 <details>
 
 <summary>History news</summary>
-
+- [2026-02-02] Paper submitted to KDD 2026 and is currently under review.
 - [2026-01-23] Utility functions updated.
 - [2025-11-17] Repository initiated.
 
